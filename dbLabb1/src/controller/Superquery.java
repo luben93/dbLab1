@@ -6,14 +6,22 @@ import javax.sql.*;
 
 public class Superquery {
 private ArrayList<String> result;
+private ArrayList<Object> result1;
 private String query;
 private Connection con;
-	public Superquery(String query){
+	public Superquery(Connection con){
 		result=new ArrayList<String>();
+		result1=new ArrayList<Object>();
+		this.con=con;
+
 		this.query=query;
 	}
 	
-	public void executeQuery() throws SQLException {
+	public ArrayList<Object> getResult(){
+		return result1;
+	}
+	
+	public void executeQuery(String query) throws SQLException {
 		
 		Statement stmt = null;
 	    try {
@@ -38,6 +46,7 @@ private Connection con;
     			// custom type (e.g. Employee).
 	    		for(int c = 1; c <= ccount; c++) {
 	    			result.add(rs.getString(c));
+	    			result1.add(rs.getObject(c)+"");
 	    			System.out.print(rs.getObject(c) + "\t");
 	    		}
 		        //System.out.println();

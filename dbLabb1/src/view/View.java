@@ -26,7 +26,6 @@ package view;
 		private JPanel contentPane;
 		private int BoxOptionSelected;
 		private int searchChoice;
-
 		/**
 		 * Launch the application.
 		 *
@@ -46,7 +45,7 @@ package view;
 		/**
 		 * Create the frame.
 		 */
-		public View() {
+		public View( final controller.driver dri) {
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			setBounds(100, 100, 450, 300);
 			contentPane = new JPanel();
@@ -216,6 +215,8 @@ package view;
 					//CALL CONTROLLER BLABLA
 					//skapa med artist sång och genre
 					//**TODO
+					dri.q1(artist.getText(),song.getText(),BoxOptions[BoxOptionSelected]);
+					
 					System.out.println(song.getText());
 					System.out.println(artist.getText());
 					System.out.println(BoxOptions[BoxOptionSelected]);
@@ -339,18 +340,6 @@ package view;
 				}
 			});
 		}
-		public void listenerfunc(){
-			add.setVisible(true);
-			search.setVisible(true);
-			rate.setVisible(true);
-			textArea.setVisible(false);
-			comboBox.setVisible(false);
-			textArea2.setVisible(false);
-			artist.setVisible(false);
-			textArea3.setVisible(false);
-			song.setVisible(false);
-			btnMenu.setVisible(false);
-			btnSubmit.setVisible(false);
-		}
+		
 	}
 
