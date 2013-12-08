@@ -1,26 +1,15 @@
 package controller;
 
 import java.awt.EventQueue;
+import java.util.ArrayList;
 
 import view.View;
 
 public class Controller {
-	
-		public static void main(String[] args) {
-			EventQueue.invokeLater(new Runnable() {
-				public void run() {
-					try {
-						View frame = new View();
-						frame.setVisible(true);
-					} catch (Exception e) {
-						e.printStackTrace();//test only
-					}
-				}
-			});
-		}
-		
-		
-		
+	public static void main (String[] args){
+		driver program=new driver();
+		program.start();
+	}
 		
 		
 		

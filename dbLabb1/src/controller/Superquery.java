@@ -6,11 +6,14 @@ import javax.sql.*;
 
 public class Superquery {
 private ArrayList<String> result;
-	public Superquery(){
+private String query;
+private Connection con;
+	public Superquery(String query){
 		result=new ArrayList<String>();
+		this.query=query;
 	}
 	
-	public void executeQuery(Connection con, String query) throws SQLException {
+	public void executeQuery() throws SQLException {
 		
 		Statement stmt = null;
 	    try {
@@ -37,7 +40,7 @@ private ArrayList<String> result;
 	    			result.add(rs.getString(c));
 	    			System.out.print(rs.getObject(c) + "\t");
 	    		}
-		        System.out.println();
+		        //System.out.println();
 	    	}
 	    	
 	    }	

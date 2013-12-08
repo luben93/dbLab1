@@ -339,5 +339,18 @@ package view;
 				}
 			});
 		}
+		public void listenerfunc(){
+			add.setVisible(true);
+			search.setVisible(true);
+			rate.setVisible(true);
+			textArea.setVisible(false);
+			comboBox.setVisible(false);
+			textArea2.setVisible(false);
+			artist.setVisible(false);
+			textArea3.setVisible(false);
+			song.setVisible(false);
+			btnMenu.setVisible(false);
+			btnSubmit.setVisible(false);
+		}
 	}
 
