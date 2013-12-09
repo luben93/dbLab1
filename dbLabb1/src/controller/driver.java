@@ -29,13 +29,16 @@ public class driver {
 			}
 		
 		public void q1(String value1, String value2,String value3){
-			connect("insert into music (Artist,Title,Genre"
-						+ ") values ('"+value1+"', '"+value2+"', '"+value3+"'");
+			connect("insert into music (artist,album,genre"
+						+ ") values ('"+value1+"', '"+value2+"', '"+value3+"')",1);
 					
 		}
+		 public void q2(String value1, String value2){
+			   connect("Select * FROM music where "+value1+" = '"+value2+"'", 2);
+			     
+			  }
 		
-		
-	public void connect(String sqlquery){
+	public void connect(String sqlquery,int type){//type 1 = update,type 2=query
 		 String server = 
 	    			"jdbc:mysql://"+ip+":3306/" + "labb1" +"?UseClientEnc=UTF8"; 
 	        
@@ -46,8 +49,19 @@ public class driver {
 				System.out.println("Connected!");
 
 				
-				Superquery query =new Superquery(con);
-				query.executeQuery(sqlquery);
+				Superquery query ;//=new Superquery(con);
+				switch(type){
+			//	case 1:query.executeUpdate(sqlquery);break;
+				//case 2:query.executeQuery(sqlquery);break;
+				case 1: query= new SQLupdate(con);
+				((SQLupdate) query).execute(sqlquery);
+				break;
+				case 2: query =new SQLquery(con);
+				System.out.println(((SQLquery) query).execute(sqlquery));
+				break;
+				}
+				
+				//query.executeUpdate(sqlquery);
 	        }
 			catch(Exception e) {
 				javax.swing.JOptionPane.showMessageDialog(null, 

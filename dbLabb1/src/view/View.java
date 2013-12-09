@@ -308,26 +308,30 @@ package view;
 			SubmitSearch.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent ae) {
 					
-					if(searchChoice == 1){
-						System.out.println(ArtistTextSearch.getText());
-						ArtistTextSearch.setVisible(false);
-					}
-					//*TODO
-					if(searchChoice == 2){
-						System.out.println(TitleTextSearch.getText());
-						TitleTextSearch.setVisible(false);
-					}
-					//*TODO
-					if(searchChoice == 3){
-						System.out.println(GenreTextSearch.getText());
-						GenreTextSearch.setVisible(false);
-					}
-					//*TODO
-					if(searchChoice == 4){
-						System.out.println(RatingTextSearch.getText());
-						RatingTextSearch.setVisible(false);
-					}
-					//TODO
+					  if(searchChoice == 1){
+					      System.out.println(ArtistTextSearch.getText());
+					      ArtistTextSearch.setVisible(false);
+					      dri.q2("artist",ArtistTextSearch.getText());
+					     }
+					     //*TODO
+					     if(searchChoice == 2){
+					      System.out.println(TitleTextSearch.getText());
+					      TitleTextSearch.setVisible(false);
+					      dri.q2("title",TitleTextSearch.getText());
+					     }
+					     //*TODO
+					     if(searchChoice == 3){
+					      System.out.println(GenreTextSearch.getText());
+					      GenreTextSearch.setVisible(false);
+					      dri.q2("genre",GenreTextSearch.getText());
+					     }
+					     //*TODO
+					     if(searchChoice == 4){
+					      System.out.println(RatingTextSearch.getText());
+					      RatingTextSearch.setVisible(false);
+					      dri.q2("rating",RatingTextSearch.getText());
+					     }
+					     //TODO
 					
 					add.setVisible(true);
 					search.setVisible(true);
