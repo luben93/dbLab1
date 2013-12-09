@@ -63,6 +63,6 @@ public class SQLquery {
 	}
 	
 	public ArrayList<Music> getResults(){
-		return result;
+		return (ArrayList<Music>) result.clone();
 	}
 }

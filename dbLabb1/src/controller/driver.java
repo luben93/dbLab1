@@ -11,7 +11,7 @@ import view.View;
 public class driver {
 	private ArrayList<String> test;
 	private View frame;
-	private results;
+	private ArrayList<Music> results;
 	private String ip = "83.250.249.187", user = "lucas", pwd = "1q2w3e";
 
 	public void start() {
@@ -40,8 +40,8 @@ public class driver {
 
 	}
 	
-	public ArrayList<Music> getlatestQueryResults(){
-		return query.getResults().clone();
+	public ArrayList<Music> getLatestQueryResults(){
+		return (ArrayList<Music>) results.clone();
 	}
 
 	public void connect(String sqlquery, int type) {// type 1 = update,type
