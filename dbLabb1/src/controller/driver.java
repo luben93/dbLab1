@@ -34,7 +34,7 @@ public class driver {
 					
 		}
 		 public void q2(String value1, String value2){
-			   connect("Select * FROM music where "+value1+" = '"+value2+"'", 2);
+			   connect("Select * FROM music where "+value1+" like '"+value2+"%'", 2);
 			     
 			  }
 		

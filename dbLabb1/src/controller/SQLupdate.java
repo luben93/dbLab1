@@ -17,7 +17,7 @@ public void execute(String query) throws SQLException {
 	    try {
 	    	// Execute the SQL statement
 	    	stmt = super.con.createStatement();
-	 
+	    	stmt.executeUpdate(query);
 	    	
 	    }	
 	    finally {

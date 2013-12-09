@@ -45,7 +45,7 @@ public ArrayList<java.sql.Array> execute(String query) throws SQLException {
 	    			System.out.print(rs.getObject(c) + "\t");
 	    		}
 		        System.out.println();
-		        result.add(rs.getArray("artist"));
+		        result.add(rs.getArray("artist"));//dose not work
 	    	}
 	    	
 	    }	

@@ -19,6 +19,7 @@ package view;
 	import javax.swing.JTextPane;
 	import javax.swing.JTextArea;
 	import java.awt.Color;
+import javax.swing.JTabbedPane;
 
 
 	public class View extends JFrame {
@@ -174,6 +175,10 @@ package view;
 			SubmitSearch.setBounds(280, 168, 89, 23);
 			contentPane.add(SubmitSearch);
 			
+			JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
+			tabbedPane.setBounds(137, 161, 21, 21);
+			contentPane.add(tabbedPane);
+			
 			textArea.setVisible(false);
 			comboBox.setVisible(false);
 			textArea2.setVisible(false);
@@ -317,7 +322,7 @@ package view;
 					     if(searchChoice == 2){
 					      System.out.println(TitleTextSearch.getText());
 					      TitleTextSearch.setVisible(false);
-					      dri.q2("title",TitleTextSearch.getText());
+					      dri.q2("album",TitleTextSearch.getText());
 					     }
 					     //*TODO
 					     if(searchChoice == 3){
@@ -344,6 +349,5 @@ package view;
 				}
 			});
 		}
-		
 	}
 
