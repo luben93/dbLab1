@@ -61,4 +61,8 @@ public class SQLquery {
 		}
 		return result;
 	}
+	
+	public ArrayList<Music> getResults(){
+		return result;
+	}
 }
